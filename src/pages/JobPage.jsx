@@ -20,8 +20,10 @@ const JobPage = ({ deleteJob }) => {
     deleteJob(jobId);
 
     toast.success("Job deleted successfully");
-    
-    return navigate("/jobs");
+
+    setTimeout(() => {
+      navigate("/jobs");
+    }, 1000);
   };
 
   return (
