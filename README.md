@@ -2,7 +2,8 @@
 
 This is the jobs listing project from the [YouTube crash course](https://youtu.be/LDB4uaJ87e0).
 
-<img src="public/screen.png" />
+![screen](https://github.com/user-attachments/assets/c0dc4c2a-4756-4d70-a186-f5891a94bf83)
+
 
 ## Usage
 
