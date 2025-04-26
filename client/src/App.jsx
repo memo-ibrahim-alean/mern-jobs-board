@@ -13,6 +13,7 @@ import AddJobsPage from "./pages/AddJobsPage";
 import JobPage, { jobLoader } from "./pages/JobPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
   // Add a job to the database
@@ -36,6 +37,18 @@ const App = () => {
     return;
   };
 
+  // Update Job
+  const updateJob = async (job) => {
+    const res = await fetch(`/api/jobs/${job.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(job),
+    });
+    return;
+  };
+
   // Create a router for the application
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -45,6 +58,11 @@ const App = () => {
         <Route
           path="/jobs/:id"
           element={<JobPage deleteJob={deleteJob} />}
+          loader={jobLoader}
+        />
+        <Route
+          path="/edit-job/:id"
+          element={<EditJobPage updatedJobSubmit={updateJob } />}
           loader={jobLoader}
         />
         <Route
