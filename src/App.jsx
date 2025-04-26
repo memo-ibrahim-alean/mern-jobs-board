@@ -11,6 +11,8 @@ import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AddJobsPage from "./pages/AddJobsPage";
 import JobPage, { jobLoader } from "./pages/JobPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   // Add a job to the database
@@ -53,7 +55,12 @@ const App = () => {
       </Route>
     )
   );
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <ToastContainer />
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default App;
