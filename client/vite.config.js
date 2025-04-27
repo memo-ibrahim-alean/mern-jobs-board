@@ -34,7 +34,8 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       proxy: {
         "/api": {
-          target: env.VITE_API_URL,
+          target: "https://react-jobs-board-ten.vercel.app",
+          // target: env.VITE_API_URL,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
