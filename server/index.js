@@ -29,7 +29,6 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.send("Jobs API is running!");
 });
-
 app.get("/jobs", async (req, res) => {
   try {
     const limit = parseInt(req.query._limit);
