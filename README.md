@@ -1,44 +1,98 @@
-# React Jobs Project (YouTube)
+# React Jobs Board
+A full-stack job board application built as part of a React learning journey. This project allows users to browse, add, edit, and delete job listings. The frontend is built with React and hosted locally, while the backend API is developed with Express and MongoDB.
 
-This is the jobs listing project from the [YouTube crash course](https://youtu.be/LDB4uaJ87e0).
+## Project Overview
+This application is a simple job board where users can:
 
-![screen](https://github.com/user-attachments/assets/c0dc4c2a-4756-4d70-a186-f5891a94bf83)
+* View a list of job listings with details like title, type, location, salary, and company information.
+* Add new job listings through a user-friendly form.
+* Edit or delete existing job listings.
+* Enjoy a responsive design powered by Tailwind CSS.
+
+The project demonstrates a full-stack workflow, including frontend-backend communication, CRUD operations, and responsive design.
+
+## Features
+
+* Browse Jobs: View all available job listings with key details.
+* Add Jobs: Submit new job listings with details like title, description, salary, and company info.
+* Edit Jobs: Update existing job listings.
+* Delete Jobs: Remove job listings with a confirmation prompt.
+* Responsive Design: Works seamlessly on both desktop and mobile devices.
+* Loading State: Displays a loading message while fetching data from the backend.
+* Toast Notifications: Shows success/error messages for user actions using React Toastify.
+
+## Tech Stack
+
+Frontend:
+  * React (with Vite for fast development)
+  * Tailwind CSS (for styling)
+  * React Router (for navigation)
+  * React Toastify (for notifications)
 
 
-## Usage
+Backend:
+* Express (Node.js framework)
+* MongoDB (database)
+* Mongoose (MongoDB ORM)
 
-This project uses JSON-Server for a mock backend.
 
-### Install Dependencies
+### Tools:
+* Git (version control)
+* Vite (build tool)
 
-```bash
-npm install
-```
 
-### Run JSON Server
 
-The server will run on http://localhost:8000
+## Installation and Setup
+Follow these steps to run the project locally on your machine.
 
-```bash
-npm run server
-```
+Prerequisites
 
-### Run Vite Frontend
+- Node.js (v16 or higher)
+- MongoDB (local instance or MongoDB Atlas)
 
-React will run on http://localhost:3000
+### Frontend Setup
 
-```bash
-npm run dev
-```
+* Navigate to the client directory:cd A:\dev\react-crash-2025\client
 
-### Build for Production
+* Install dependencies: `npm install`
 
-```bash
-npm run build
-```
+* Start the development server:npm run dev
 
-### Preview Production Build
+* Open `http://localhost:5173` in your browser to view the app.
 
-```bash
-npm run preview
-```
+### Backend Setup
+
+* Navigate to the server directory:cd A:\dev\react-crash-2025\server
+
+* Install dependencies:npm install
+
+* Create a .env file in the server directory and add your 
+MongoDB URI:MONGO_URI=<your-mongodb-uri> PORT=5000
+* Replace <your-mongodb-uri> with your MongoDB connection string 
+
+* Start the backend server:npm run serve
+
+
+#### The backend will run on `http://localhost:5000`
+
+## Notes
+
+1. The frontend communicates with the backend via a proxy configured in vite.config.js. Ensure the backend is running before starting the frontend.
+
+2. If you encounter CORS issues, verify the CORS settings in server/index.js.
+
+## API Endpoints
+The backend provides the following endpoints for CRUD operations on job listings:
+
+* `GET /jobs` Fetch all job listings.Response: Array of job objects.
+
+* `GET /jobs/:id` Fetch a single job by ID.Response: Job object or 404 if not found.
+
+* `POST /jobs` Create a new job listing.Body: JSON object with job details (title, type, description, etc.).Response: Created job object.
+
+* `PUT /jobs/:id` Update an existing job listing.Body: JSON object with updated job details.Response: Updated job object.
+
+* `DELETE /jobs/:id` Delete a job listing by ID.Response: Success message or 404 if not found.
+
+
+
