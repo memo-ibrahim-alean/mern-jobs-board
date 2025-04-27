@@ -1,4 +1,4 @@
-# React Jobs Board
+# MERN Jobs Board
 
 A full-stack job board application built as part of a React learning journey. This project allows users to browse, add, edit, and delete job listings. The frontend is built with React and hosted locally, while the backend API is developed with Express and MongoDB.
 
