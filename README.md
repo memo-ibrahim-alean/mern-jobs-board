@@ -51,27 +51,19 @@ Prerequisites
 
 * Install dependencies: `npm install`
 
-* Start the development server: npm run dev
-
-* Open `http://localhost:5173` in your browser to view the app.
-
-### Backend Setup
-
-* Navigate to the server directory:
+* Navigate to the server directory
 
 * Install dependencies: `npm install`
 
-* Start the backend server: `npm run serve`
+* Navigate to the root directory
 
-#### The backend will run on `http://localhost:5000`
+* Install dependencies: `npm install`
 
-### Setup videos
+* Start the frontend and backend using: `npm run dev `
 
-part 1:
-https://github.com/user-attachments/assets/15f7c412-4191-4c61-83d5-0e13a9be2d76
+Open `http://localhost:5173` in your browser to view the app.
 
-part 2: 
-https://github.com/user-attachments/assets/8e15dd53-55f7-42f3-b2a9-72de00d44fce
+note : The backend will run on `http://localhost:5000`
 
 ### demo video
 part 1:
