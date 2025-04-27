@@ -30,8 +30,8 @@ const App = () => {
   };
 
   // Delete Job
-  const deleteJob = async (id) => {
-    const res = await fetch(`/api/jobs/${id}`, {
+  const deleteJob = async (_id) => {
+    const res = await fetch(`/api/jobs/${_id}`, {
       method: "DELETE",
     });
     return;
@@ -39,7 +39,7 @@ const App = () => {
 
   // Update Job
   const updateJob = async (job) => {
-    const res = await fetch(`/api/jobs/${job.id}`, {
+    const res = await fetch(`/api/jobs/${job._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -56,13 +56,13 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
         <Route
-          path="/jobs/:id"
+          path="/jobs/:_id"
           element={<JobPage deleteJob={deleteJob} />}
           loader={jobLoader}
         />
         <Route
-          path="/edit-job/:id"
-          element={<EditJobPage updatedJobSubmit={updateJob } />}
+          path="/edit-job/:_id"
+          element={<EditJobPage updatedJobSubmit={updateJob} />}
           loader={jobLoader}
         />
         <Route

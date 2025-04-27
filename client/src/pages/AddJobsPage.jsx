@@ -29,7 +29,7 @@ const AddJobsPage = ({ addJobSubmit }) => {
         contactPhone,
       },
     };
-
+    console.log(newJob);
     addJobSubmit(newJob);
     toast.success("Job added successfully");
     return navigate("/jobs");

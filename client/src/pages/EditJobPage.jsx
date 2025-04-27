@@ -16,12 +16,12 @@ const EditJobPage = ({ updatedJobSubmit }) => {
   const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
   const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { _id } = useParams();
 
   const submitForm = async (e) => {
     e.preventDefault();
     const updatedJob = {
-      id,
+      _id,
       title,
       type,
       location,
@@ -37,7 +37,7 @@ const EditJobPage = ({ updatedJobSubmit }) => {
 
     updatedJobSubmit(updatedJob);
     toast.success("Job updated successfully");
-    return navigate(`/jobs/${id}`);
+    return navigate(`/jobs/${_id}`);
   };
 
   return (
