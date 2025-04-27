@@ -58,13 +58,18 @@ Prerequisites
 
 4. Install dependencies: `npm install`
 
-5. Navigate to the root directory
+5. Create your environment file: 
+  - Go to the server folder.
+  - Make a copy of .env.example and rename it to .env.
+  - Fill in your actual environment variables (like MONGO_URI, PORT, etc.) inside .env.
 
-6. Install dependencies: `npm install`
+6. Navigate to the root directory
 
-7. Start the frontend and backend using: `npm run dev `
+7. Install dependencies: `npm install`
 
-8. Open `http://localhost:5173` in your browser to view the app.
+8. Start the frontend and backend using: `npm run dev `
+
+9. Open `http://localhost:5173` in your browser to view the app.
 
 note : The backend will run on `http://localhost:5000`
 
