@@ -40,17 +40,32 @@ Backend:
 * Git (version control)
 * Vite (build tool)
 
-
-
-## Installation and Setup
-Follow these steps to run the project locally on your machine.
-
 Prerequisites
 
 - Node.js (v16 or higher)
 - MongoDB (local instance or MongoDB Atlas)
 
-### Setup demo video
+- ### Frontend Setup
+
+* Navigate to the client directory
+
+* Install dependencies: `npm install`
+
+* Start the development server: npm run dev
+
+* Open `http://localhost:5173` in your browser to view the app.
+
+### Backend Setup
+
+* Navigate to the server directory:
+
+* Install dependencies: `npm install`
+
+* Start the backend server: `npm run serve`
+
+#### The backend will run on `http://localhost:5000`
+
+### Setup videos
 
 part 1:
 https://github.com/user-attachments/assets/15f7c412-4191-4c61-83d5-0e13a9be2d76
@@ -58,7 +73,15 @@ https://github.com/user-attachments/assets/15f7c412-4191-4c61-83d5-0e13a9be2d76
 part 2: 
 https://github.com/user-attachments/assets/8e15dd53-55f7-42f3-b2a9-72de00d44fce
 
-#### The backend will run on `http://localhost:5000`
+### demo video
+part 1:
+https://github.com/user-attachments/assets/b724d055-8b2c-4417-a2e1-cca032759662
+
+part 2:
+https://github.com/user-attachments/assets/81fdfa95-940e-43cd-aefa-6f0b19ea02c3
+
+part 3:
+https://github.com/user-attachments/assets/93a3d050-89de-493b-9cce-2faa63c0ab55
 
 ## API Endpoints
 The backend provides the following endpoints for CRUD operations on job listings:
