@@ -3,9 +3,6 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => {
-  // Load environment variables based on the mode (development, production, etc.)
-  const env = loadEnv(mode, process.cwd(), "VITE_");
-
   return {
     plugins: [
       react(),
@@ -34,8 +31,7 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       proxy: {
         "/api": {
-          target: "https://react-jobs-board-ten.vercel.app",
-          // target: env.VITE_API_URL,
+          target: "http://localhost:5000",
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
