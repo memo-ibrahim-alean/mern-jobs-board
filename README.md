@@ -48,7 +48,7 @@ Prerequisites
 - Node.js (v16 or higher)
 - MongoDB (local instance or MongoDB Atlas)
 
-- ### Setup
+### Setup
 
 1. Navigate to the client directory
 
