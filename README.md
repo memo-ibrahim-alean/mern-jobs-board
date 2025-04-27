@@ -52,34 +52,24 @@ Prerequisites
 
 ### Frontend Setup
 
-* Navigate to the client directory:cd A:\dev\react-crash-2025\client
+* Navigate to the client directory
 
 * Install dependencies: `npm install`
 
-* Start the development server:npm run dev
+* Start the development server: npm run dev
 
 * Open `http://localhost:5173` in your browser to view the app.
 
 ### Backend Setup
 
-* Navigate to the server directory:cd A:\dev\react-crash-2025\server
+* Navigate to the server directory:
 
-* Install dependencies:npm install
+* Install dependencies: `npm install`
 
-* Create a .env file in the server directory and add your 
-MongoDB URI:MONGO_URI=<your-mongodb-uri> PORT=5000
-* Replace <your-mongodb-uri> with your MongoDB connection string 
-
-* Start the backend server:npm run serve
+* Start the backend server: `npm run serve`
 
 
 #### The backend will run on `http://localhost:5000`
-
-## Notes
-
-1. The frontend communicates with the backend via a proxy configured in vite.config.js. Ensure the backend is running before starting the frontend.
-
-2. If you encounter CORS issues, verify the CORS settings in server/index.js.
 
 ## API Endpoints
 The backend provides the following endpoints for CRUD operations on job listings:
