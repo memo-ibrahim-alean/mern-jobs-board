@@ -58,7 +58,7 @@ const jobsSchema = new Schema({
       type: String,
       required: false,
       trim: true,
-      match: [/^\+?[1-9]\d{1,14}$/, "Please enter a valid phone number"],
+      // match: [/^\+?[1-9]\d{1,14}$/, "Please enter a valid phone number"],
     },
   },
   createdAt: {
